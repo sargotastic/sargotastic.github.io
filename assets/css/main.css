@@ -1448,7 +1448,7 @@
   }
   
   .nav li:hover {
-	background: red;
+	background: #70c7be;
 	transition: background .3s;
   }
   
