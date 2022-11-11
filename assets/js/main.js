@@ -1,8 +1,3 @@
-/*
-	Full Motion by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
-*/
 
 (function($) {
 
@@ -16,10 +11,11 @@
 
 	$(function() {
 
+		
+		
 		var $window = $(window),
 			$body = $('body');
 
-		// Disable animations/transitions until the page has loaded.
 			$body.addClass('is-loading');
 
 			$window.on('load', function() {
@@ -28,15 +24,12 @@
 				}, 100);
 			});
 
-		// Fix: Placeholder polyfill.
 			$('form').placeholder();
 
-		// Banner.
 			var $banner = $('#banner');
 
 			if ($banner.length > 0) {
 
-				// IE fix.
 					if (skel.vars.IEVersion < 12) {
 
 						$window.on('resize', function() {
@@ -84,10 +77,8 @@
 
 			}
 
-		// Scrolly.
 			$('.scrolly').scrolly();
 
-		// Poptrox.
 			$window.on('load', function() {
 
 				var $thumbs = $('.thumbnails');
@@ -108,11 +99,61 @@
 
 			});
 
-		// Initial scroll.
 			$window.on('load', function() {
 				$window.trigger('scroll');
 			});
 
 	});
+	
+	const nameEl = document.querySelector("#name");
+const emailEl = document.querySelector("#email");
+const companyNameEl = document.querySelector("#company-name");
+const messageEl = document.querySelector("#message");
+
+const form = document.querySelector("#submit-form");
+
+function checkValidations() {
+  let letters = /^[a-zA-Z\s]*$/;
+  const name = nameEl.value.trim();
+  const email = emailEl.value.trim();
+  const companyName = companyNameEl.value.trim();
+  const message = messageEl.value.trim();
+  if (name === "") {
+     document.querySelector(".name-error").classList.add("error");
+      document.querySelector(".name-error").innerText =
+        "Please fill out this field!";
+  } else {
+    if (!letters.test(name)) {
+      document.querySelector(".name-error").classList.add("error");
+      document.querySelector(".name-error").innerText =
+        "Please enter only characters!";
+    } else {
+      
+    }
+  }
+  if (email === "") {
+     document.querySelector(".name-error").classList.add("error");
+      document.querySelector(".name-error").innerText =
+        "Please fill out this field!";
+  } else {
+    if (!letters.test(name)) {
+      document.querySelector(".name-error").classList.add("error");
+      document.querySelector(".name-error").innerText =
+        "Please enter only characters!";
+    } else {
+      
+    }
+  }
+}
+
+function reset() {
+  nameEl = "";
+  emailEl = "";
+  companyNameEl = "";
+  messageEl = "";
+  document.querySelector(".name-error").innerText = "";
+}
+
 
 })(jQuery);
+
