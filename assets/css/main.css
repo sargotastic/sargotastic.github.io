@@ -1433,6 +1433,28 @@
 		  .card button:hover {
 			opacity: 0.7;
 		  }
-		  
 
+.nav {
+	background: #000;
+	height: 60px; 
+  }
+  
+  .nav li {
+	display: inline-block;
+	list-style: none;
+	height: 60px; 
+	line-height: 60px; 
+	padding: 0 40px; 
+  }
+  
+  .nav li:hover {
+	background: red;
+	transition: background .3s;
+  }
+  
+  .nav-link {
+	color: #fff;
+	text-decoration: none;
+  }
 
+		
